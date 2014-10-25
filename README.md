@@ -6,9 +6,11 @@ The clean dataset is generated using run_analysis.R script. This script works as
 First of all, the library dplyr must be loaded because of some used functions (group_by(), %>%, summarise_each())
 
 Next, the training and the test sets are merged to create one data set. For this purpose we define a new function (readsubdataset) that giving a datasettype and optionally a folder, reads and combine the data of a data set type in a data frame using these steps:
-    - Read the three subdatasets from the input folder
-    - Set the variable names
-    - Combine them all
+
+    * Read the three subdatasets from the input folder
+    * Set the variable names
+    * Combine them all
+    
 With this function, we read the train and the test datasets and using rbind() function join both in just one dataset.
 
 Next extracts only the measurements on the mean and standard deviation for each measurement, greping the variable names containing "mean()" or "std()". Don't forgetting including the subject identifier column and the activity measured column.
